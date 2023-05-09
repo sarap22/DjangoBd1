@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto 4</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous"></script>    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+  <header>
+    <button class="btn btn-info" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop" aria-controls="offcanvasTop">PACIENTES</button>
+<div class="offcanvas offcanvas-top show text-bg-dark text-center" tabindex="-1" id="offcanvasDark" aria-labelledby="offcanvasDarkLabel" style="height: 540px;">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title" id="offcanvasDarkLabel">Datos de los pacientes</h5>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvasDark" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body">
+    <table class="table table-success table-striped" id="tabla">
+      <thead>
+          <tr>
+            <th scope="col" style="width: 2%;">Nombre</th>
+            <th scope="col" >Apellido</th>
+            <th scope="col">Edad</th>
+            <th scope="col">Sexo</th>
+            <th scope="col">Celular</th>
+            <th scope="col">Rh</th>
+            <th scope="col">Causa de cita médica</th>
+            <th scope="col">Diagnóstico</th>
+            <th scope="col">Medicamento recetado</th>
+            <th scope="col">Costo total medicamentos</th>
+          </tr>
+        </thead>
+      <tbody>
+          {% for i in paciente %} 
+          <tr>
+              <td>{{i.nombre}}</td>
+              <td>{{i.apellido}}</td>
+              <td>{{i.edad}}</td>
+              <td>{{i.sexo}}</td>
+              <td>{{i.celular}}</td>
+              <td>{{i.rh}}</td>
+              <td>{{i.causa}}</td>
+              <td>{{i.diagnostico}}</td>
+              <td>{{i.medicamento}}</td>
+              <td>{{i.costo}}</td>
+          </tr>   
+          {% endfor %}  
+</tbody>
+</table>
+  </div>
+</div>
+  </header>
+        <!--<button type="button" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#staticBackdrop" id="mostrar" >PRODUCTOS</button>
+        <div class="modal fade text-center" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">      
+                  <table class="table table-success table-striped" id="tabla">
+                    <thead>
+                        <tr>
+                          <th scope="col" style="width: 2%;">Nombre</th>
+                          <th scope="col" >Apellido</th>
+                          <th scope="col">Edad</th>
+                          <th scope="col">Sexo</th>
+                          <th scope="col">Celular</th>
+                          <th scope="col">Rh</th>
+                          <th scope="col">Causa de cita médica</th>
+                          <th scope="col">Diagnóstico</th>
+                          <th scope="col">Medicamento recetado</th>
+                          <th scope="col">Costo total medicamentos</th>
+                        </tr>
+                      </thead>
+                    <tbody>
+                        {% for i in paciente %} 
+                        <tr>
+                            <td>{{i.nombre}}</td>
+                            <td>{{i.apellido}}</td>
+                            <td>{{i.edad}}</td>
+                            <td>{{i.sexo}}</td>
+                            <td>{{i.celular}}</td>
+                            <td>{{i.rh}}</td>
+                            <td>{{i.causa}}</td>
+                            <td>{{i.diagnostico}}</td>
+                            <td>{{i.medicamento}}</td>
+                            <td>{{i.costo}}</td>
+                        </tr>   
+                        {% endfor %}  
+            </tbody>
+        </table>
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-warning" data-bs-dismiss="modal">Close</button>
+    </div>
+    </div>
+    </div>
+    </div>
+  -->
+</body>
+</html>

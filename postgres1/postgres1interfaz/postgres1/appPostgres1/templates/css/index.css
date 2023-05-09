@@ -1,0 +1,13 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    background-color: aqua;
+}
+
+header{
+    display: flex;
+    flex-direction: column;
+    width: 1%;
+}
